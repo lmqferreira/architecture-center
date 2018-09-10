@@ -13,9 +13,9 @@ pnp.series.next: client-assertion
 This article describes how a multi-tenant SaaS application can support authentication via Active Directory Federation Services (AD FS), in order to federate with a customer's AD FS.
 
 ## Overview
-Azure Active Directory (Azure AD) makes it easy to sign in users from Azure AD tenants, including Office365 and Dynamics CRM Online customers. But what about customers who use on-premise Active Directory on a corporate intranet?
+Azure Active Directory (Azure AD) makes it easy to sign in users from Azure AD tenants, including Office365 and Dynamics CRM Online customers. But what about customers who use on-premises Active Directory on a corporate intranet?
 
-One option is for these customers to sync their on-premise AD with Azure AD, using [Azure AD Connect]. However, some customers may be unable to use this approach, due to corporate IT policy or other reasons. In that case, another option is to federate through Active Directory Federation Services (AD FS).
+One option is for these customers to sync their on-premises AD with Azure AD, using [Azure AD Connect]. However, some customers may be unable to use this approach, due to corporate IT policy or other reasons. In that case, another option is to federate through Active Directory Federation Services (AD FS).
 
 To enable this scenario:
 
@@ -73,7 +73,7 @@ By default, the relying party application receives only a fixed set of claims av
 The rest of this article describes how to set up the trust relationship between the RP (the app) and the account partner (the customer).
 
 ## AD FS deployment
-The SaaS provider can deploy AD FS either on-premise or on Azure VMs. For security and availability, the following guidelines are important:
+The SaaS provider can deploy AD FS either on-premises or on Azure VMs. For security and availability, the following guidelines are important:
 
 * Deploy at least two AD FS servers and two AD FS proxy servers to achieve the best availability of the AD FS service.
 * Domain controllers and AD FS servers should never be exposed directly to the Internet and should be in a virtual network with direct access to them.
